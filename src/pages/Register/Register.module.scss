@@ -1,0 +1,142 @@
+/* src/pages/Register.module.scss */
+/* VIẾT BẰNG camelCase ĐỂ KHỚP VỚI JS */
+
+.logo {
+	font-family: Arial, Helvetica, sans-serif;
+	/* Font giống Facebook */
+	font-size: 56px;
+	/* Cỡ chữ to */
+	font-weight: 900;
+	/* Rất đậm */
+	color: #1877f2;
+	/* Màu xanh dương của Facebook */
+	margin: 0 0 20px 0;
+	/* Căn lề dưới */
+}
+
+.registerPage {
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	padding: 20px;
+	background-color: #f0f2f5;
+}
+
+.registerBox {
+	background-color: #ffffff;
+	border-radius: 8px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+	padding: 24px;
+	width: 100%;
+	max-width: 430px;
+	text-align: center;
+
+	h2 {
+		/* Thẻ lồng nhau không bị ảnh hưởng */
+		font-size: 28px;
+		margin: 0 0 10px 0;
+	}
+
+	p {
+		font-size: 15px;
+		color: #606770;
+		margin-bottom: 20px;
+	}
+}
+
+.registerForm {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+
+.formGroup {
+	text-align: left;
+
+	label {
+		display: block;
+		font-size: 14px;
+		font-weight: 600;
+		margin-bottom: 5px;
+	}
+
+	input[type="text"],
+	input[type="email"],
+	input[type="password"],
+	input[type="date"] {
+		width: 100%;
+		padding: 11px;
+		font-size: 15px;
+		border: 1px solid #dddfe2;
+		border-radius: 6px;
+		background-color: #f5f6f7;
+		box-sizing: border-box;
+
+		&:focus {
+			outline: none;
+			border-color: #1877f2;
+		}
+	}
+}
+
+.genderGroup {
+	display: flex;
+	justify-content: space-between;
+	gap: 10px;
+}
+
+.genderOption {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	padding: 11px;
+	border: 1px solid #dddfe2;
+	border-radius: 6px;
+	font-size: 15px;
+	cursor: pointer;
+
+	input[type="radio"] {
+		width: auto;
+		margin-left: 10px;
+	}
+}
+
+.errorMessage {
+	color: #d93025;
+	font-size: 13px;
+	text-align: left;
+}
+
+.submitBtn {
+	background-color: #00a400;
+	color: #ffffff;
+	font-size: 18px;
+	font-weight: 700;
+	border: none;
+	border-radius: 6px;
+	padding: 12px 0;
+	cursor: pointer;
+	transition: background-color 0.2s;
+
+	&:hover {
+		background-color: #008a00;
+	}
+}
+
+.loginLink {
+	color: #1877f2;
+	font-size: 16px;
+	text-decoration: none;
+	display: block;
+	margin-top: 20px;
+	border-top: 1px solid #dddfe2;
+	padding-top: 20px;
+
+	&:hover {
+		text-decoration: underline;
+	}
+}
