@@ -2,9 +2,10 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import Login from './pages/Login';
 import Register from './pages/Register';
+import { useAuth } from './context/AuthContext';
 
 function App() {
-  const user = null;
+  const { user } = useAuth();
   return (
     <BrowserRouter>
       <Routes>
@@ -12,10 +13,10 @@ function App() {
           element={user ? <HomePage /> : <Navigate to='Login' />} />
 
         <Route path='/Login'
-          element={user ? <Navigate to="Login" /> : <Login />} />
+          element={<Login />} />
 
         <Route path='/Register'
-          element={user ? <Navigate to="Register" /> : <Register />} />
+          element={<Register />} />
       </Routes>
     </BrowserRouter>
   )
